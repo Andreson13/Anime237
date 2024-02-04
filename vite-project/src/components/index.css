@@ -1,0 +1,38 @@
+.card{
+    position: relative;
+    border-radius: inherit;
+    animation: glow 1s linear 0s forwards infinite alternate-reverse;
+    filter:brightness(110%);
+}
+
+
+
+.fg-image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: inherit;
+    border-radius: inherit;
+    border:none
+}
+
+.card:hover .fg-image,.bg-image{
+    transition-duration: 0.5s; 
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.bg-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px) brightness(100%);
+    border-radius: inherit;
+}
+
+button{
+    appearance: none;
+    outline-color:var(--ACTION-color);
+}

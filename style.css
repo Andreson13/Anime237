@@ -29,6 +29,7 @@ body{
     background: var(--light-color);
     align-items: center;
     justify-content: center;
+    scroll-behavior: smooth;
 }
 
 section{

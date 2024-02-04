@@ -1,0 +1,91 @@
+.load_animation{
+    font-size: 4.5rem;
+    text-align: center;
+    margin: 2rem ;
+    
+
+}
+
+.animate_name{
+    animation: slidedown 2s ease 0s 1 forwards 
+}
+
+.slogan{
+    text-align:center;
+    animation: slide 2s ease 0s 1 forwards ;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
+}
+
+#Home{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+p{
+    font-family: italic;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: show 2s ease 1.7s 1 forwards ;
+}
+
+.quotes{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+
+@keyframes show {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media  screen and (max-width:700px) {
+    p{
+        font-size: 1.2rem;
+    }
+}
+
+@keyframes slide {
+    0%{
+        opacity: 0;
+        display: block;
+        transform: translatex(-100%);
+    }
+    100%{
+        display: block;
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+@keyframes slidedown {
+    0%{
+        opacity: 0;
+        transform: translatey(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+@media screen and (max-width:900px){
+    .load_animation{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+        .load_animation{
+            font-size: 1.7rem;
+        }
+}

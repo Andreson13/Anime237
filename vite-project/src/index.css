@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --BG-color:#26282A;
+    --FG-color:#fff;
+    --Section-BG:#131010d3;
+    --ACTION-color:aqua;
+}
+
+body{
+    background: var(--BG-color);
+    color: var(--FG-color);
+    font-family: 'Nunito', sans-serif;
+}
+
+.App__section{
+    display: block;
+    max-width: 2000px;
+    margin: 1rem auto; 
+    padding: 1rem 5rem;
+}
+
+.text_glow{
+    animation: glow 3s ease 0s infinite;
+    animation-direction: alternate;
+    color: var(--ACTION-color);
+    text-shadow: 0 0 10px   var(--ACTION-color);
+    filter: brightness(200px);
+}
+
+
+
+@keyframes glow {
+    from{
+        text-shadow: 0 0 10px   var(--ACTION-color);
+    }
+    to{
+        text-shadow: 0 0 50px   var(--ACTION-color);
+    }
+}
+
+
+.header__text{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.section__bg{
+    background-color: var(--Section-BG);
+}
+
+.p__text{
+    font-size: 1.4rem;
+}
+
+@media  screen and (max-width: 900px) {
+    .App__section{
+        padding: 1rem 1.5rem;
+    }
+    
+    .header__text{
+        font-size: 1.5rem;
+    } 
+}
+
+@media screen and (max-width:500px){
+    .header__text{
+        font-size: 1.5rem;
+    }   
+}
+
+@media screen and (min-width:1200px) {
+    .header__text{
+        font-size: 2.5rem;
+    } 
+
+    .p__text{
+        font-size: 1.8rem;
+    }
+}
