@@ -3,25 +3,29 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    min-height: 500px;
 
 }
+
+
+ 
 
 .wrapper{
     width:80%;
     height: 80%;
-    padding: 1.5rem;
-    overflow-y: scroll;
+    padding: 0 1.5rem;
     flex-flow: wrap;
     margin: auto;
+    overflow-y: scroll;
     border-radius: 20px;
     display: grid;
     grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-    box-shadow:  0px 0px 10px 1px var( --ACTION-color);
 }
+
 
 .wrapper::-webkit-scrollbar{
     width: 10px;
-    height: 2px;
+    height: 7px;
     background: transparent;
 }
 
@@ -42,23 +46,32 @@
     margin: 2rem 1.5rem;
 }
 
-#card:hover{
+/* #card:hover{
     box-shadow:  0px 0px 60px 5px var( --ACTION-color);
 }
+ */
 
-
-@media screen and (max-width:715px){
-    #Discovery{
-        height: 65vh;
-    }
-
+@media screen and (max-width:900px){
     .wrapper{
         width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        align-items: center;
+    }
+    #card{
+        margin: 0 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
-@media screen and (max-width:400px){
-    #Discovery{
-        height: 75vh;
-    }
 
+@media screen and (max-width:400px){
+    .wrapper::-webkit-scrollbar{
+        width: 2px;
+        background: transparent;
+    }
 }

@@ -85,8 +85,10 @@ label:hover{
 .Mobile__menu--btn{
     color: var(--ACTION-color);
     margin-left: auto;
-    width: 1.5rem;
-    height: 1.5rem;
+    scale: 1.5;
+    position: absolute;
+    top:18px;
+    right: 18px;
 }
 
 .Mobile__menu--btn:hover{

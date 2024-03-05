@@ -10,7 +10,7 @@ import {blue_Exorcist,
     seventh_time,
     vinland_saga,
     tamodachi_game,
-} from  "../assets/index"
+}from  "../assets/index"
 
 
 export const pics = [blue_Exorcist,

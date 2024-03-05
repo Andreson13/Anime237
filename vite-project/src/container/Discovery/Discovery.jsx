@@ -10,7 +10,7 @@ const Discovery = () => {
         <div className="wrapper">
           {
             discouvery_pics.map((pic) => {
-              return <div id='card'><Card img={pic}/></div> 
+              return <Card img={pic}/>
             })
           }
         </div>

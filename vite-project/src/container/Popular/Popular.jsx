@@ -1,10 +1,9 @@
 import React from 'react'
 import "./popular.css"
 import {pics} from "../index"
-import {BsArrowLeft,BsArrowRight, BsArrowRightCircleFill} from "react-icons/bs"
+import {BsArrowLeft,BsArrowRight} from "react-icons/bs"
 import Popular_card from '../../components/Popular_card'
 import {useRef,useState} from "react"
-import Button from "../../components/Button"
 
 
 
@@ -36,7 +35,13 @@ const Popular = () => {
     <section className='App__section section__bg' id="Popular">
       <h1 className='header__text text_glow'>Popular</h1>
       <div className='container' ref={scroller}>
-         <Popular_card img={pics[value]} className="card"/>
+          {
+            pics.map((pic, index ) => {
+                return <div id='p_card'>
+                  {/* <Popular_card img={pic} key={index}/> */}
+                </div> 
+            })
+          }
       </div>
       <div className='directions'>
         <div className='direction_bg'><BsArrowLeft className='arrow' onClick={previor}/></div>

@@ -1,7 +1,8 @@
 import React from 'react'
 import "./index.css"
 import {useRef} from "react"
-import {  BsMenuDown, BsSearch,BsCrosshair} from "react-icons/bs"
+import {Link} from "react-router-dom"
+import {  BsMenuDown, BsSearch} from "react-icons/bs"
 
 function Nav() {
 
@@ -9,8 +10,7 @@ function Nav() {
 
   function toggle_menu() {
       mobile_menu.current.classList.toggle("show")
-      mobile_menu.current.focus()
-  }
+  }  
 
   return (
     <section className="App__section navigation" >
@@ -32,7 +32,7 @@ function Nav() {
 
         <div className="Menu_search">
           <div className='search-icon'>
-            <BsSearch className='search' title='Search for more'/>
+           <Link to={"/Search"}><BsSearch className='search' title='Search for more'/></Link> 
             <BsMenuDown className='search menu_btn'  onClick={toggle_menu} />
           </div>
             <div className='Mobile_menu' ref={mobile_menu}>
